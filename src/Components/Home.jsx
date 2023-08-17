@@ -11,13 +11,13 @@ const Home = () => {
     const projectCount = useRef(null);
 
     const animationClientsCount = () => {
-        animate(0, 100, {
+        animate(0, 20, {
             duration: 1,
             onUpdate: (v) => (clientCount.current.textContent = v.toFixed())
         })
     }
     const animationProjectsCount = () => {
-        animate(0, 20, {
+        animate(0, 5, {
             duration: 1,
             onUpdate: (v) => (projectCount.current.textContent = v.toFixed())
         })
@@ -71,7 +71,7 @@ const Home = () => {
                         <p>+
                             <motion.span whileInView={animationClientsCount} ref={clientCount} ></motion.span>
                         </p>
-                        <span>Clients Worldwide</span>
+                        <span>Projects Done</span>
                     </article>
 
                     <aside>
@@ -79,7 +79,7 @@ const Home = () => {
                             <p>+
                                 <motion.span whileInView={animationProjectsCount} ref={projectCount}></motion.span>
                             </p>
-                            <span>Projects Done</span>
+                            <span>Current Projects</span>
                         </article>
                         <article data-specail>
                             <p>Contact</p>
